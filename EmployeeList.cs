@@ -9,5 +9,16 @@ namespace AddicTech_Library
     class EmployeeList
     {
         private List<Employee> _employeeList;
-    }
-}
+
+        public EmployeeList(Employee employee){
+           
+
+        }
+
+
+
+
+
+
+    }//End of class
+}//End of namespace
