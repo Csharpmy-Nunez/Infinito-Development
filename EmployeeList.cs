@@ -9,7 +9,7 @@ namespace AddicTech_Library
     class EmployeeList
     {
         private List<Employee> _employeeList;
-        private int _couner;
+        private int _counter;
 
         public EmployeeList(){
         }
@@ -20,7 +20,7 @@ namespace AddicTech_Library
         public void addEmployee(Employee employee){
             if(employee != null){
                 _employeeList.Add(employee);
-                _couner++;
+                _counter++;
             }else
             {
                 Console.WriteLine("Enter an employee object");
