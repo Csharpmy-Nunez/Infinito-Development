@@ -18,10 +18,6 @@ namespace test
 
         }
         //Methods
-        /*Q1) Write a method to determine whether an input string X is a sub-string of another input Y.  
-              a) Plesae try to write code wih PHP and you may NOT use PHP libraries. 
-              b)The strings are alphabetic characters and lower case. 
-          (For example, “bat” is a sub-string of “abate”, but not of “beat”)*/
           public static bool isSubString(string valueString, string valueSubString)
           {
 
