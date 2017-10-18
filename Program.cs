@@ -11,28 +11,42 @@ namespace test
             //Console.WriteLine("Entered sub-string: ");
             //string subString = Console.ReadLine();
             Console.WriteLine("----------------------------------");
-            //Console.WriteLine("Result => " + findSubstring(mainString.ToLower(), subString.ToLower()));
+            Console.WriteLine("Result => " + isSubString(mainString.ToLower(), subString.ToLower()));
             //Console.WriteLine("Result => " + "\n" + charFrequency(mainString));
             //Console.WriteLine("Result => " + "\n" + firstNonRepeatingChar(mainString));
-            Console.WriteLine("Result => " + "\n" + stringCompression(mainString));
+            //Console.WriteLine("Result => " + "\n" + stringCompression(mainString));
 
         }
         //Methods
-        public static string findSubstring(string valueString, string valueSubString){
-            string substring = "";
-            char[] holderStr = valueString.ToCharArray();
-            char[] holderSubstr = valueSubString.ToCharArray();
+        /*Q1) Write a method to determine whether an input string X is a sub-string of another input Y.  
+              a) Plesae try to write code wih PHP and you may NOT use PHP libraries. 
+              b)The strings are alphabetic characters and lower case. 
+          (For example, “bat” is a sub-string of “abate”, but not of “beat”)*/
+          public static bool isSubString(string valueString, string valueSubString)
+          {
 
-            for(int i = 0; i < holderStr.Length; i++){
-                 for(int j = 0; j < holderSubstr.Length; j++){
-                     if(holderStr[i] == holderSubstr[j]){
-                         substring += holderSubstr[j].ToString();
-                     }
-                 }
+            bool substring;
+
+            for(int i = 0; i <= valueString.Length - valueSubString.Length; i++)
+            {
+                substring = true;
+                for(int j = 0; j < valueSubString.Length; j++)
+                {
+                    if(valueSubString[j] != valueString[i + j])
+                    {
+                        substring = false;
+                        break;
+                    } 
+                }
+
+                if (substring)
+                    return true;
+
             }
-              
-            return substring;
-        }
+
+
+            return false;
+          }
     //Method to check character frequency
     public static string charFrequency(string value){
         char chr;
